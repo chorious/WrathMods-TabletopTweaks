@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\build\BepInEx.AssemblyPublicizer.MSBuild.props" Condition="Exists('..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\build\BepInEx.AssemblyPublicizer.MSBuild.props')" />
+  <Import Project="..\packages\AssemblyPublicizer.1.0.2\build\AssemblyPublicizer.props" Condition="Exists('..\packages\AssemblyPublicizer.1.0.2\build\AssemblyPublicizer.props')" />
   <Import Project="..\packages\Aze.Publicise.MSBuild.Task.1.0.0\build\Aze.Publicise.MSBuild.Task.props" Condition="Exists('..\packages\Aze.Publicise.MSBuild.Task.1.0.0\build\Aze.Publicise.MSBuild.Task.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -66,6 +68,18 @@
       <HintPath>$(WrathPath)\Wrath_Data\Managed\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="AsmResolver, Version=4.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\lib\net472\AsmResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="AsmResolver.DotNet, Version=4.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\lib\net472\AsmResolver.DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="AsmResolver.PE, Version=4.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\lib\net472\AsmResolver.PE.dll</HintPath>
+    </Reference>
+    <Reference Include="AsmResolver.PE.File, Version=4.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\lib\net472\AsmResolver.PE.File.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>$(SolutionDir)lib\Assembly-CSharp_public.dll</HintPath>
       <Private>False</Private>
@@ -73,6 +87,15 @@
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="AssemblyPublicizer, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AssemblyPublicizer.1.0.2\lib\net472\AssemblyPublicizer.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.AssemblyPublicizer, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\lib\net472\BepInEx.AssemblyPublicizer.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.AssemblyPublicizer.MSBuild, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\lib\net472\BepInEx.AssemblyPublicizer.MSBuild.dll</HintPath>
     </Reference>
     <Reference Include="Owlcat.Runtime.Visual">
       <HintPath>$(WrathPath)\Wrath_Data\Managed\Owlcat.Runtime.Visual.dll</HintPath>
@@ -406,6 +429,7 @@
     <Compile Include="NewContent\RogueTalents\BleedingAttack.cs" />
     <Compile Include="NewContent\RogueTalents\EmboldeningStrike.cs" />
     <Compile Include="NewContent\RogueTalents\RogueTalentProperties.cs" />
+    <Compile Include="NewContent\Spells\DeadlyJuggernaut.cs" />
     <Compile Include="NewContent\Spells\LongArms.cs" />
     <Compile Include="NewContent\Spells\MagesDisjunction.cs" />
     <Compile Include="NewContent\Spells\MagicalTailSpells.cs" />
@@ -433,6 +457,7 @@
     <EmbeddedResource Include="Localization\LocalizationPack.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NewContent\KiPowers\" />
@@ -746,6 +771,8 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Aze.Publicise.MSBuild.Task.1.0.0\build\Aze.Publicise.MSBuild.Task.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Aze.Publicise.MSBuild.Task.1.0.0\build\Aze.Publicise.MSBuild.Task.props'))" />
+    <Error Condition="!Exists('..\packages\AssemblyPublicizer.1.0.2\build\AssemblyPublicizer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AssemblyPublicizer.1.0.2\build\AssemblyPublicizer.props'))" />
+    <Error Condition="!Exists('..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\build\BepInEx.AssemblyPublicizer.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BepInEx.AssemblyPublicizer.MSBuild.0.2.0\build\BepInEx.AssemblyPublicizer.MSBuild.props'))" />
   </Target>
   <PropertyGroup>
     <PostBuildEvent>(robocopy "$(TargetDir) " "%25WrathPath%25\Mods\TabletopTweaks-Base\ " /s /e )^&amp; IF %25ERRORLEVEL%25 LEQ 1 exit 0</PostBuildEvent>
