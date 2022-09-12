@@ -25,7 +25,7 @@ namespace TabletopTweaks.Base.NewContent {
 
                 Features.MartialWeaponProficencySelection.AddMartialWeaponProficencySelection();
                 //Features.NauseatedPoision.AddNauseatedPoision();
-
+                // Spells.SavageMaw.AddSavageMaw();
                 Spells.DeadlyJuggernaut.AddDeadlyJuggernaut();
                 Spells.LongArms.AddLongArms();
                 Spells.ShadowEnchantment.AddShadowEnchantment();

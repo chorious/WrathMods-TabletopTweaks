@@ -30,8 +30,8 @@ namespace TabletopTweaks.Base.NewContent.Spells {
                 bp.SetDescription(TTTContext, "With every enemy life you take, you become increasingly dangerous and difficult to stop." +
                     " During the duration of the spell, you gain a cumulative +1 profane bonus on melee attack rolls, melee weapon damage " +
                     "rolls, Strength checks, and Strength-based skill checks as well as DR 2/— each time you reduce a qualifying opponent" +
-                    " to 0 or few hit points (maximum +6 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
-                    " Hit Dice equal to or greater than your Hit Dice –8.");
+                    " to 0 or few hit points (maximum +5 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
+                    " Hit Dice equal to or greater than your Hit Dice -4.");
                 bp.m_Icon = icon;
                 bp.IsClassFeature = true;
                 bp.AddComponent<AttackTypeAttackBonus>(c => {
@@ -70,14 +70,14 @@ namespace TabletopTweaks.Base.NewContent.Spells {
                 bp.SetDescription(TTTContext, "With every enemy life you take, you become increasingly dangerous and difficult to stop." +
                     " During the duration of the spell, you gain a cumulative +1 profane bonus on melee attack rolls, melee weapon damage " +
                     "rolls, Strength checks, and Strength-based skill checks as well as DR 2/— each time you reduce a qualifying opponent" +
-                    " to 0 or few hit points (maximum +6 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
-                    " Hit Dice equal to or greater than your Hit Dice –8.");
+                    " to 0 or few hit points (maximum +5 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
+                    " Hit Dice equal to or greater than your Hit Dice -4.");
                 bp.m_Icon = icon;
                 bp.IsClassFeature = true;
                 bp.AddContextRankConfig(c => {
                     c.m_BaseValueType = ContextRankBaseValueType.CharacterLevel;
                     c.m_Progression = ContextRankProgression.BonusValue;
-                    c.m_StepLevel = -8;
+                    c.m_StepLevel = -4;
                 });
                 bp.AddComponent<AddInitiatorAttackWithWeaponTrigger>(c => {
                     c.WaitForAttackResolve = true;
@@ -104,7 +104,7 @@ namespace TabletopTweaks.Base.NewContent.Spells {
                                         ValueType = ContextValueType.Shared,
                                         ValueShared = AbilitySharedValue.Damage
                                     },
-                                    TargetValue = 6
+                                    TargetValue = 5
                                 }
                             ),
                             IfTrue = Helpers.CreateActionList(
@@ -149,8 +149,8 @@ namespace TabletopTweaks.Base.NewContent.Spells {
                 bp.SetDescription(TTTContext, "With every enemy life you take, you become increasingly dangerous and difficult to stop." +
                     " During the duration of the spell, you gain a cumulative +1 profane bonus on melee attack rolls, melee weapon damage " +
                     "rolls, Strength checks, and Strength-based skill checks as well as DR 2/— each time you reduce a qualifying opponent" +
-                    " to 0 or few hit points (maximum +6 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
-                    " Hit Dice equal to or greater than your Hit Dice –8.");
+                    " to 0 or few hit points (maximum +5 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
+                    " Hit Dice equal to or greater than your Hit Dice -4.");
                 bp.m_Icon = icon;
                 bp.AvailableMetamagic = Metamagic.Quicken | Metamagic.Extend | Metamagic.Heighten | Metamagic.CompletelyNormal;
                 bp.LocalizedDuration = Helpers.CreateString(TTTContext, $"{bp.name}.Duration", "1 minute/level");
@@ -195,8 +195,8 @@ namespace TabletopTweaks.Base.NewContent.Spells {
                 bp.SetDescription(TTTContext, "A monk with this ki power can spend 2 points from his ki pool as a standard action to grant himself Deadly Juggernaut buff: \nWith every enemy life you take, you become increasingly dangerous and difficult to stop." +
                     " During the duration of the spell, you gain a cumulative +1 profane bonus on melee attack rolls, melee weapon damage " +
                     "rolls, Strength checks, and Strength-based skill checks as well as DR 2/— each time you reduce a qualifying opponent" +
-                    " to 0 or few hit points (maximum +6 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
-                    " Hit Dice equal to or greater than your Hit Dice –8.");
+                    " to 0 or few hit points (maximum +5 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
+                    " Hit Dice equal to or greater than your Hit Dice -4.");
                 bp.LocalizedDuration = Helpers.CreateString(TTTContext, $"{bp.name}.Duration", "1 minute/level");
                 bp.LocalizedSavingThrow = new Kingmaker.Localization.LocalizedString();
                 bp.m_Icon = icon;
@@ -235,8 +235,8 @@ namespace TabletopTweaks.Base.NewContent.Spells {
                 bp.SetDescription(TTTContext, "A monk with this ki power can spend 2 points from his ki pool as a standard action to grant himself Deadly Juggernaut buff: \nWith every enemy life you take, you become increasingly dangerous and difficult to stop." +
                     " During the duration of the spell, you gain a cumulative +1 profane bonus on melee attack rolls, melee weapon damage " +
                     "rolls, Strength checks, and Strength-based skill checks as well as DR 2/— each time you reduce a qualifying opponent" +
-                    " to 0 or few hit points (maximum +6 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
-                    " Hit Dice equal to or greater than your Hit Dice –8.");
+                    " to 0 or few hit points (maximum +5 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
+                    " Hit Dice equal to or greater than your Hit Dice -4.");
                 bp.IsClassFeature = true;
                 bp.AddPrerequisite<PrerequisiteClassLevel>(c => {
                     c.m_CharacterClass = monkClassRef;
@@ -253,8 +253,8 @@ namespace TabletopTweaks.Base.NewContent.Spells {
                 bp.SetDescription(TTTContext, "A monk with this ki power can spend 2 points from his ki pool as a standard action to grant himself Deadly Juggernaut buff: \nWith every enemy life you take, you become increasingly dangerous and difficult to stop." +
                     " During the duration of the spell, you gain a cumulative +1 profane bonus on melee attack rolls, melee weapon damage " +
                     "rolls, Strength checks, and Strength-based skill checks as well as DR 2/— each time you reduce a qualifying opponent" +
-                    " to 0 or few hit points (maximum +6 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
-                    " Hit Dice equal to or greater than your Hit Dice –8.");
+                    " to 0 or few hit points (maximum +5 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
+                    " Hit Dice equal to or greater than your Hit Dice -4.");
                 bp.LocalizedDuration = Helpers.CreateString(TTTContext, $"{bp.name}.Duration", "1 minute/level");
                 bp.LocalizedSavingThrow = new Kingmaker.Localization.LocalizedString();
                 bp.m_Icon = icon;
@@ -293,8 +293,8 @@ namespace TabletopTweaks.Base.NewContent.Spells {
                 bp.SetDescription(TTTContext, "A monk with this ki power can spend 2 points from his ki pool as a standard action to grant himself Deadly Juggernaut buff: \nWith every enemy life you take, you become increasingly dangerous and difficult to stop." +
                     " During the duration of the spell, you gain a cumulative +1 profane bonus on melee attack rolls, melee weapon damage " +
                     "rolls, Strength checks, and Strength-based skill checks as well as DR 2/— each time you reduce a qualifying opponent" +
-                    " to 0 or few hit points (maximum +6 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
-                    " Hit Dice equal to or greater than your Hit Dice –8.");
+                    " to 0 or few hit points (maximum +5 bonus and DR 10/—) with a melee attack. A qualifying opponent has a number of" +
+                    " Hit Dice equal to or greater than your Hit Dice -4.");
                 bp.IsClassFeature = true;
                 bp.AddPrerequisite<PrerequisiteClassLevel>(c => {
                     c.m_CharacterClass = monkClassRef;
