@@ -227,6 +227,11 @@
         "Homebrew": false,
         "Description": "The acid or fire effects of the affected spell adhere to the creature, causing more damage the next round. When a creature takes acid or fire damage from the affected spell, that creature takes damage equal to 2x the spell’s actual level at the start of its next turn. The damage is acid or fire, as determined by the spell’s descriptor."
       },
+      "MetamagicElementalSpell": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "You may replace a spell’s normal damage with the chosen energy type or split the spell’s damage, so that half is of that energy type and half is of its normal type."
+      },
       "MetamagicEncouragingSpell": {
         "Enabled": true,
         "Homebrew": false,
@@ -581,6 +586,11 @@
         "Enabled": true,
         "Homebrew": false,
         "Description": "This spell functions like shadow enchantment, except that it enables you to create partially real, illusory versions of psychic, sorcerer, or wizard enchantment spells of 5th level or lower. If the spell is recognized as a greater shadow enchantment, it's only three-fifths (60%) as effective."
+      },
+      "StunningBarrierGreater": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "This spell functions as stunning barrier, except it provides a +2 bonus to AC and on saving throws and it is not discharged until it has stunned a number of creatures equal to your caster level."
       }
     },
     "IsExpanded": true

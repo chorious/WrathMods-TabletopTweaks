@@ -32,6 +32,7 @@ namespace TabletopTweaks.Base.NewContent {
                 Spells.ShadowEnchantment.AddShadowEnchantmentGreater();
                 Spells.MagicalTailSpells.AddNewMagicalTailSpells();
                 Spells.MagesDisjunction.AddMagesDisjunction();
+                Spells.StunningBarrierGreater.AddStunningBarrierGreater();
 
                 //Added early as some things depend on them for selections
                 Feats.MetamagicFeats.IntensifiedSpell.AddIntensifiedSpell();
@@ -41,6 +42,7 @@ namespace TabletopTweaks.Base.NewContent {
                 Feats.MetamagicFeats.PiercingSpell.AddPiercingSpell();
                 Feats.MetamagicFeats.SolidShadows.AddSolidShadows();
                 Feats.MetamagicFeats.EncouragingSpell.AddEncouragingSpell();
+                Feats.MetamagicFeats.ElementalSpell.AddElementalSpell();
 
                 Templates.AlignmentTemplates.AddCelestialTemplate();
                 Templates.AlignmentTemplates.AddEntropicTemplate();
@@ -248,6 +250,7 @@ namespace TabletopTweaks.Base.NewContent {
                 Feats.MetamagicFeats.PiercingSpell.UpdateSpells();
                 Feats.MetamagicFeats.RimeSpell.UpdateSpells();
                 Feats.MetamagicFeats.SolidShadows.UpdateSpells();
+                Feats.MetamagicFeats.ElementalSpell.UpdateSpells();
             }
         }
     }

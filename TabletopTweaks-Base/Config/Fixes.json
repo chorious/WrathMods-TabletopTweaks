@@ -839,6 +839,11 @@
           "Homebrew": false,
           "Description": "Prevents you from selecting the same talent more than once."
         },
+        "SlipperyMind": {
+          "Enabled": true,
+          "Homebrew": false,
+          "Description": "Sets Slippery Mind to correctly be an advanced talent.."
+        },
         "Trapfinding": {
           "Enabled": true,
           "Homebrew": false,
@@ -1051,7 +1056,18 @@
       "TricksterTricks": {
         "Enabled": true,
         "Homebrew": false,
-        "Description": "Remvoes trickster tricks from the combat feat selection"
+        "Description": "Remvoes trickster tricks from the combat feat selection."
+      }
+    },
+    "IsExpanded": true
+  },
+  "WinterWitch": {
+    "DisableAll": false,
+    "Settings": {
+      "UnearthlyCold": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "Fixes unearthly cold to properly apply metamagic and bonus damage."
       }
     },
     "IsExpanded": true

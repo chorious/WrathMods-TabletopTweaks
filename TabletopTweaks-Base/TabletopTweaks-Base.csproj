@@ -99,6 +99,7 @@
     </Reference>
     <Reference Include="Owlcat.Runtime.Visual">
       <HintPath>$(WrathPath)\Wrath_Data\Managed\Owlcat.Runtime.Visual.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="TabletopTweaks-Core">
       <HintPath>$(WrathPath)\Mods\TabletopTweaks-Core\TabletopTweaks-Core.dll</HintPath>
@@ -212,6 +213,7 @@
     <Compile Include="Bugfixes\Classes\Sorcerer.cs" />
     <Compile Include="Bugfixes\Classes\Trickster.cs" />
     <Compile Include="Bugfixes\Classes\Warpriest.cs" />
+    <Compile Include="Bugfixes\Classes\WinterWitch.cs" />
     <Compile Include="Bugfixes\Classes\Witch.cs" />
     <Compile Include="Bugfixes\Classes\Wizard.cs" />
     <Compile Include="Bugfixes\Features\Backgrounds.cs" />
@@ -329,6 +331,7 @@
     <Compile Include="NewContent\Feats\CelestialServant.cs" />
     <Compile Include="NewContent\Feats\DervishDance.cs" />
     <Compile Include="NewContent\Feats\DispelFocus.cs" />
+    <Compile Include="NewContent\Feats\MetamagicFeats\ElementalSpell.cs" />
     <Compile Include="NewContent\Feats\MetamagicFeats\EncouragingSpell.cs" />
     <Compile Include="NewContent\Feats\ErastilsBlessing.cs" />
     <Compile Include="NewContent\Feats\ExtraArcana.cs" />
@@ -435,6 +438,7 @@
     <Compile Include="NewContent\Spells\MagesDisjunction.cs" />
     <Compile Include="NewContent\Spells\MagicalTailSpells.cs" />
     <Compile Include="NewContent\Spells\ShadowEnchantment.cs" />
+    <Compile Include="NewContent\Spells\StunningBarrierGreater.cs" />
     <Compile Include="NewContent\Templates\AlignmentTemplates.cs" />
     <Compile Include="NewContent\WeaponEnchantments\NonStackingTempEnchantments.cs" />
     <Compile Include="NewContent\WeaponEnchantments\TerrifyingTremble.cs" />
@@ -553,6 +557,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Abilities\Icon_ShadowEnchantmentGreater.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Abilities\Icon_StunningBarrierGreater.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Abilities\Icon_WarriorSpirit_Activation.png">
@@ -687,6 +694,21 @@
     <Content Include="Assets\Feats\Icon_DispelFocus.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Feats\Icon_ElementalSpellFeat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Feats\Icon_ElementalSpellFeatAcid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Feats\Icon_ElementalSpellFeatCold.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Feats\Icon_ElementalSpellFeatElectricity.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Feats\Icon_ElementalSpellFeatFire.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Feats\Icon_EncouragingSpellFeat.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -745,6 +767,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Metamagic\Icon_BurningSpellMetamagic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Metamagic\Icon_ElementalSpellAcidMetamagic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Metamagic\Icon_ElementalSpellColdMetamagic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Metamagic\Icon_ElementalSpellElectricityMetamagic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Metamagic\Icon_ElementalSpellFireMetamagic.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Metamagic\Icon_EncouragingSpellMetamagic.png">
